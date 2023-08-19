@@ -1,7 +1,9 @@
 'use client'
 
+import { useAppDispatch, useAppSelector } from '@/redux/hooks'
 import { FormEvent, useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
+import { storeMessage } from '../redux/features/chat/chat.slice'
 import styles from './page.module.css'
 
 const socket = io('http://localhost:4000')
@@ -13,6 +15,9 @@ interface Message {
 }
 
 export default function Home() {
+  const dispatch = useAppDispatch()
+  const selector = useAppSelector(state => state.chat.messages)
+
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState<Message[]>([])
 
@@ -24,8 +29,9 @@ export default function Home() {
       date: new Date(),
     }
 
-    socket.emit('message',  newMessage )
-    setMessages(prevState => [...prevState, newMessage])
+    socket.emit('message', newMessage)
+    dispatch(storeMessage(newMessage))
+    // setMessages((prevState) => [...prevState, newMessage])
     setMessage('')
   }
 
@@ -37,8 +43,10 @@ export default function Home() {
   }, [])
 
   const reciveMessage = (message: Message) => {
+    dispatch(storeMessage(message))
+
     console.log('🚀 ~ file: page.tsx:62 ~ reciveMessage ~ message:', message)
-    return setMessages((prevState) => [...prevState, message])
+    // setMessages((prevState) => [...prevState, message])
   }
 
   return (
@@ -49,16 +57,15 @@ export default function Home() {
         <button>Send</button>
       </form>
       <div>
-        {!!messages.length && messages?.map((message, idx) => {
-          console.log("🚀 ~ file: page.tsx:53 ~ {messages?.map ~ message:", message)
-          return (
-            <div key={idx+2*6} style={{ color: 'black', backgroundColor: 'white', display: "flex", flexDirection: "row" }}>
-              <p style={{ color: 'black' }}>{message.body}</p>
-              ~ || ~
-              <p style={{ color: 'black' }}>{message.from}</p>
-            </div>
-          )
-        })}
+        {!!selector.length &&
+          selector?.map((message, idx) => {
+            console.log('🚀 ~ file: page.tsx:53 ~ {messages?.map ~ message:', message)
+            return (
+              <div key={idx + 2 * 6} style={{ color: 'black', backgroundColor: 'white', display: 'flex', flexDirection: 'row' }}>
+                <p style={{ color: 'black' }}>{message.body}</p>~ || ~<p style={{ color: 'black' }}>{message.from}</p>
+              </div>
+            )
+          })}
       </div>
     </main>
   )
