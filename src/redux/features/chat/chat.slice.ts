@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit'
 interface Message {
   body: string
   from: string
-  date: Date
+  date: number
 }
 // Define a type for the slice state
 interface CounterState {
