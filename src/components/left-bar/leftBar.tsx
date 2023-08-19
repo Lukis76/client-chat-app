@@ -1,4 +1,4 @@
-import { BoxInterlocutor } from './content-header/box-interlocutor/box-interlocutor'
+import { BoxInterlocutor } from './box-interlocutor/box-interlocutor'
 import { ContentHeader } from './content-header/content-header'
 import style from './leftBar.module.css'
 

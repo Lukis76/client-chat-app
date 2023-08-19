@@ -1,0 +1,43 @@
+.sectionInputMessage {
+  position: relative;
+  width: 100%;
+  max-height: 56px;
+  height: 100%;
+  margin-bottom: 24px;
+}
+
+.sectionInputMessage > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 16px 56px;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  color: var(--navy-grey, #707991);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.emojiIcon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sendIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
