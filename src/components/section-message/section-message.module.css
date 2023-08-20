@@ -1,0 +1,10 @@
+.sectionContentMessage {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('/public/images/bg-print.png'), lightgray 0% 0% / 73.9091694355011px 73.9091694355011px repeat;
+  background-blend-mode: overlay;
+}

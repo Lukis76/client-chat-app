@@ -1,0 +1,8 @@
+.leftBarContent {
+    width: 100%;
+    max-width: 364px;
+    min-height: 100dvh;
+    background-color:#FFFFFF;
+    border-right: 1px solid var(--light-grey, #F5F5F5);;
+
+}
