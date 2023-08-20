@@ -4,7 +4,9 @@ import { useAppDispatch, useAppSelector } from '@/redux/hooks'
 import { FormEvent, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { storeMessage } from '../redux/features/chat/chat.slice'
-import styles from './page.module.css'
+import styles from './app.module.css'
+import { LeftBar } from '../components/left-bar/leftBar'
+import { SectionMessage } from '../components/section-message/section-message'
 
 const socket = io('http://localhost:4000')
 
@@ -56,8 +58,8 @@ export default function Home() {
     }
 
     return (
-        <main className={styles.main}>
-            <div></div>
+        <main className={styles.contentApp}>
+            {/* <div></div>
             <form onSubmit={handleSubmit} style={{ color: 'black' }}>
                 <input type='text' name='message' placeholder='write your message...' />
                 <button>Send</button>
@@ -75,7 +77,9 @@ export default function Home() {
                             </div>
                         )
                     })}
-            </div>
+            </div> */}
+            <LeftBar />
+            <SectionMessage />
         </main>
     )
 }

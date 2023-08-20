@@ -13,7 +13,16 @@ const usuarios = [
     },
 ]
 
-export const LeftBar = () => {
+const getRooms = async () => {
+    const rooms = await fetch('http://localhost:3000/room')
+    const data = await rooms.json()
+    return data
+
+}
+
+export const LeftBar = async () => {
+    const rooms = await getRooms()
+    console.log('rooms:', rooms)
     return (
         <section className={style.leftBarContent}>
             <ContentHeader />

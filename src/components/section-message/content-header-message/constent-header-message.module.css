@@ -28,7 +28,7 @@
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
 }
 
 .avatarAndNameAndMessageContainer > div {
