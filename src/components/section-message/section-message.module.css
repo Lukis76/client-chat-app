@@ -1,6 +1,7 @@
 .sectionContentMessage {
   width: 100%;
   min-height: 100dvh;
+  max-height: 100dvh;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;

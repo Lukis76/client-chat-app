@@ -4,6 +4,9 @@
   width: 100%;
   height: 275px;
   height: 100%;
+  /* max-height: calc(100dvh - 56px); */
+  height: 100dvh;
+  overflow: hidden;
   
 }
 

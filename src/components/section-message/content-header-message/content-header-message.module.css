@@ -40,7 +40,7 @@
 .avatarAndNameAndMessageContainer > div > h4 {
   color: var(--rich-black, #011627);
 /* 16-Semi-Bold */
-font-family: Inter;
+/* font-family: Inter; */
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
@@ -51,7 +51,7 @@ line-height: 20px; /* 125% */
   color: var(--navy-grey, #707991);
 
 /* 14-Reg */
-font-family: Inter;
+/* font-family: Inter; */
 font-size: 14px;
 font-style: normal;
 font-weight: 400;

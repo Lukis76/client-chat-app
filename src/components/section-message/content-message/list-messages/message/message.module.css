@@ -1,0 +1,42 @@
+.contentMessage {
+  background-color: blueviolet;
+  max-width: 400px;
+  width: min-content;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+
+.contentMessageHeader {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+.nameUserMessage {
+  
+
+}
+
+.dateMessage {
+display: flex;
+text-align: center;
+/* flex-wrap: nowrap; */
+white-space: nowrap;
+/* width: 100px; */
+justify-content: center;
+align-items: center;
+font-size: smaller;
+}
+
+.contentMessageBody {
+
+}
+

@@ -36,7 +36,7 @@
 .sectionHeader > time {
   color: var(--navy-grey, #707991);
   /* 12-Reg */
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@
 .interlocutorName {
   color: var(--rich-black, #011627);
   /* 16-Semi-Bold */
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -70,7 +70,7 @@
   color: var(--navy-grey, #707991);
 
   /* 14-Reg */
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -87,7 +87,7 @@
   border-radius: 50%;
   text-align: center;
   /* 12-Reg */
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
