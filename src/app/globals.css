@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+  --background: '#F5F5F5';
+  --foreground: '#242424';
+}
+
+/* [data-theme] */
