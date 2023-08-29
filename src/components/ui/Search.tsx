@@ -1,3 +1,5 @@
+"use client"
+
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import { Button, Input, Kbd, Modal, ModalBody, ModalContent, ModalHeader, useDisclosure } from '@nextui-org/react'
 import { FC } from 'react'

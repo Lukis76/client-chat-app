@@ -1,6 +1,6 @@
 export const messages = [
     {
-        id: 1,
+        id: 2975746,
         content: ' Possimus nisi ullam dolor beatae esse maiores dolores aliquid perspiciatis doloribus iure! Dolorem laudantium quaerat ex rem distinctio facilis inventore dolore odit!',
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -14,7 +14,7 @@ export const messages = [
         }
     },
      {
-        id: 1,
+        id: 4773,
         content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. ',
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -27,7 +27,7 @@ export const messages = [
              image: 'https://picsum.photos/200/300',
          }
     }, {
-        id: 1,
+        id: 859423695,
         content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nisi ullam dolor beatae esse maiores dolores aliquid perspiciatis doloribus iure! Dolorem laudantium quaerat ex rem distinctio facilis inventore dolore odit!',
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -40,7 +40,7 @@ export const messages = [
             image: 'https://picsum.photos/200/300',
         }
     }, {
-        id: 1,
+        id: 18958432569,
         content: 'Hello l',
         createdAt: new Date(),
         updatedAt: new Date(),

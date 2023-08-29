@@ -2,9 +2,9 @@
 
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { Button, Textarea } from '@nextui-org/react'
-import { useForm } from 'react-hook-form'
+import { FormEvent, useRef, useState } from 'react'
+import { socket } from '../../socket'
 import { PikerEmoji } from './PikerEmoji'
-import { MutableRefObject, RefObject, useRef, useState } from 'react'
 
 export const WrapperInputMessage = () => {
     const [value, setValue] = useState('');
@@ -29,12 +29,21 @@ export const WrapperInputMessage = () => {
           // Move the cursor to the end of the inserted emoji
           input.selectionStart = input.selectionEnd = selectionStart + 1;
         }
-      }
+    }
+    
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        socket?.emit('message', value)
+        setValue('')
+        inputRef.current.focus()
+    }
+    
+    
 
     return (
-        <div className=' w-full absolute bottom-1 px-20'>
+        <div className=' w-full absolute bottom-1 px-20 z-10'>
             <form className='flex justify-center items-center w-full relative'
-                // onSubmit={method.handleSubmit(submit)}
+                onSubmit={handleSubmit}
             >
                 <PikerEmoji onEmojiSelect={handleEmojiClick } />
                 <Textarea

@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
