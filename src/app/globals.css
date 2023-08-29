@@ -9,3 +9,13 @@
 }
 
 /* [data-theme] */
+
+@components {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}

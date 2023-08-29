@@ -13,7 +13,7 @@ export const ThemeSwitcher = () => {
       type='button'
       color='default'
       variant='bordered'
-      className='w-10 h-10 p-0  min-w-0 border rounded-lg'
+      className='w-unit-13 h-unit-11 p-0  min-w-0 border rounded-medium'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'dark' ? <SunIcon className='h-5 w-5 text-orange-300' /> : <MoonIcon className='h-5 w-5 text-stale-800' />}
