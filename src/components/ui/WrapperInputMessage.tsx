@@ -3,7 +3,6 @@
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { Button, Textarea } from '@nextui-org/react'
 import { FormEvent, useRef, useState } from 'react'
-import { socket } from '../../socket'
 import { PikerEmoji } from './PikerEmoji'
 
 export const WrapperInputMessage = () => {
@@ -33,7 +32,6 @@ export const WrapperInputMessage = () => {
     
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        socket?.emit('message', value)
         setValue('')
         inputRef.current.focus()
     }
