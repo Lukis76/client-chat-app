@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import { FC, ReactNode } from 'react'
 import { AuthServerProvider } from '@/components/server/AuthServerProvider'
 
+
 interface AuthenticationLayoutProps {
   children: ReactNode
 }
