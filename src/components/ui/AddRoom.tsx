@@ -27,6 +27,7 @@ export const AddRoom = () => {
         placement='top'
         size='3xl'
         onOpenChange={onOpenChange}
+        className='min-h-[60%]'
         classNames={{
           backdrop: 'bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20',
         }}
@@ -35,8 +36,8 @@ export const AddRoom = () => {
           {(onClose) => (
             <>
               <ModalHeader className='flex flex-col gap-1'>Create new room</ModalHeader>
-              <ModalBody>
-                <div className='flex flex-row gap-8 items-center'>
+              <ModalBody >
+                <div className='flex flex-row gap-8 items-center '>
                   <Input
                     label='Name room'
                     isClearable

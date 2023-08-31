@@ -12,23 +12,23 @@ export default function Home() {
       <LeftBar>
         <CardRoom image={faker.image.avatar()}>
           <CardName name={faker.person.fullName()} time={faker.date.recent().toLocaleTimeString()} />
-          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:200})} />
+          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:15})} />
         </CardRoom>
         <CardRoom image={faker.image.avatar()}>
           <CardName name={faker.person.fullName()} time={faker.date.recent().toLocaleTimeString()} />
-          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:200})} />
+          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:15})} />
         </CardRoom>
         <CardRoom image={faker.image.avatar()}>
           <CardName name={faker.person.fullName()} time={faker.date.recent().toLocaleTimeString()} />
-          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:200})} />
+          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:15})} />
         </CardRoom>
         <CardRoom image={faker.image.avatar()}>
           <CardName name={faker.person.fullName()} time={faker.date.recent().toLocaleTimeString()} />
-          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:200})} />
+          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:15})} />
         </CardRoom>
         <CardRoom image={faker.image.avatar()}>
           <CardName name={faker.person.fullName()} time={faker.date.recent().toLocaleTimeString()} />
-          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:200})} />
+          <CardLastMessage message={faker.lorem.sentence()} count={faker.number.int({min:1, max:15})} />
         </CardRoom>
       </LeftBar>
       <WrapperChat>
