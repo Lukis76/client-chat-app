@@ -1,10 +1,10 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import { LoginProvidersClient } from './loginProdiders-client'
+import { SignAuthClient } from '../sign-auth-client'
 
-export const LoginProvidersServer = async () => {
+export const AuthServerProvider = async () => {
   const suprabase = createServerComponentClient({ cookies })
   const { data } = await suprabase.auth.getSession()
 
-  return <LoginProvidersClient session={data.session} />
+  return <SignAuthClient session={data.session} />
 }

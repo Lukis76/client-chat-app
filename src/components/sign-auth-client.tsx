@@ -7,14 +7,11 @@ import { SignInWithOAuthCredentials } from '@supabase/supabase-js'
 import { useRouter } from 'next/navigation'
 import { FC } from 'react'
 
-interface LoginProvidersClientProps {
+interface SignAuthClientProps {
   session: Session | null
-  // handleSignIn: ({ provider }: SignInWithOAuthCredentials) => Promise<void>
-  // handleSignOut: () => Promise<void>
-  // children: React.ReactNode
 }
 
-export const LoginProvidersClient: FC<LoginProvidersClientProps> = ({ session }) => {
+export const SignAuthClient: FC<SignAuthClientProps> = ({ session }) => {
   const route = useRouter()
   const suprabase = createClientComponentClient()
 
@@ -29,9 +26,13 @@ export const LoginProvidersClient: FC<LoginProvidersClientProps> = ({ session })
 
   return (
     <div className='flex flex-row gap-4 w-full justify-evenly'>
-      {!session && (
+      {!!session ? (
+        <Button color='default' variant='bordered' className='min-w-0 h-unit-2xl' onPress={handleSignOut}>
+          Log Out
+        </Button>
+      ) : (
         <>
-          <Button color='default' variant='bordered' className='min-w-0 h-unit-2xl' onPress={() => handleSignIn({ provider: 'github' })}>
+          <Button color='default' variant='bordered' className='min-w-0 h-unit-2xl' onPress={() => handleSignIn({ provider: 'google' })}>
             <Google size={28} />
           </Button>
           <Button color='default' variant='bordered' className='min-w-0 h-unit-2xl' onPress={() => handleSignIn({ provider: 'github' })}>
@@ -39,18 +40,10 @@ export const LoginProvidersClient: FC<LoginProvidersClientProps> = ({ session })
           </Button>
         </>
       )}
-
-      {!!session && (
-        <Button color='default' variant='bordered' className='min-w-0 h-unit-2xl' onPress={handleSignOut}>
-          Log Out
-        </Button>
-      )}
     </div>
   )
 }
 // <button className='flex justify-center items-center py-2 px-4 rounded-xl animate-appearance-in border-2 border-default-300/50'>
-
-
 
 // channelA
 // .on(
