@@ -1,6 +1,5 @@
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
-import { Socket } from 'socket.io-client'
 
 interface Message {
     body: string
@@ -11,7 +10,6 @@ interface Message {
 interface CounterState {
     state: boolean
     room: string | number | null
-    socket: Socket | null
     messages: Message[]
     rooms: []
     chat: {
@@ -26,7 +24,6 @@ interface CounterState {
 const initialState: CounterState = {
     state: false,
     room: null,
-    socket: null,
     messages: [],
     rooms: [],
     chat: {
