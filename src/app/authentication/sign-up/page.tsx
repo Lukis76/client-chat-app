@@ -1,19 +1,28 @@
-'use client'
-import { AtSymbolIcon, FingerPrintIcon } from '@heroicons/react/24/solid'
-import { Button, Checkbox, Input, Link } from '@nextui-org/react'
+// import { AtSymbolIcon, FingerPrintIcon } from '@heroicons/react/24/solid'
+// import { Button, Checkbox, Input, Link } from '@nextui-org/react'
+import Link from 'next/link'
+import { AuthServerProvider } from '@/components/server/AuthServerProvider'
+
+export const dynamic = 'force-dynamic'
 
 const SignUpPage = () => {
   return (
     <>
+      <AuthServerProvider />
+        <div className='flex flex-row items-center gap-4 justify-between'>
+          <span className='bg-default-400/80 flex w-full h-[1px] rounded-full' />
+          <span className='text-default-400 text-lg font-medium'>Or</span>
+          <span className='bg-default-400/80 flex w-full h-[1px] rounded-full' />
+        </div>
       <div className='flex flex-col gap-1'>
         <p className='text-small'>
           Already have an account?{' '}
-          <Link color='primary' href='/authentication/sign-in' className='rounded-sm'>
+          <Link  href='/authentication/sign-in' className='rounded-sm'>
             Sign in
           </Link>
         </p>
       </div>
-      <div className='flex flex-col gap-8'>
+      {/* <div className='flex flex-col gap-8'>
         <Input
           autoFocus
           endContent={<AtSymbolIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0 w-8 h-8 -mt-4' />}
@@ -50,10 +59,10 @@ const SignUpPage = () => {
         </div>
       </div>
       <div className='flex flex-row gap-4 w-full justify-end'>
-        <Button type='submit' color='primary' variant='ghost' /* onPress={onClose} */ className='font-semibold px-8'>
+        <Button type='submit' color='primary' variant='ghost' className='font-semibold px-8'>
           Sign Up
         </Button>
-      </div>
+      </div> */}
     </>
   )
 }
